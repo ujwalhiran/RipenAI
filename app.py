@@ -428,7 +428,7 @@ st.markdown(f"""
         <!-- Riyan VT -->
         <div class="creator-card">
             <div class="avatar-wrapper">
-                <img src="{riyan_b64}" class="creator-avatar" style="transform: scale(2.5);" alt="Riyan VT"/>
+                <img src="{riyan_b64}" class="creator-avatar" style="transform-origin: center 25%; transform: scale(1.7);" alt="Riyan VT"/>
             </div>
             <div>
                 <p class="creator-name">Riyan VT</p>
