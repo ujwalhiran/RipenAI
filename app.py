@@ -27,17 +27,19 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 def get_base64_image(image_path):
     if os.path.exists(image_path):
         with open(image_path, "rb") as img_file:
             return f"data:image/jpeg;base64,{base64.b64encode(img_file.read()).decode()}"
     return ""
 
-ujwal_b64 = get_base64_image("assets/ujwal.jpg")
+ujwal_b64 = get_base64_image(os.path.join(BASE_DIR, "assets", "ujwal.jpg"))
 if not ujwal_b64:
     ujwal_b64 = get_base64_image("e:/hackathon1/assets/ujwal.jpg")
 
-riyan_b64 = get_base64_image("assets/riyan.jpg")
+riyan_b64 = get_base64_image(os.path.join(BASE_DIR, "assets", "riyan.jpg"))
 if not riyan_b64:
     riyan_b64 = get_base64_image("e:/hackathon1/assets/riyan.jpg")
 
