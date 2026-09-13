@@ -163,14 +163,21 @@ st.markdown("""
         box-shadow: 0 6px 14px rgba(234, 179, 8, 0.2);
         border-color: #FACC15;
     }
-    .creator-avatar {
-        width: 96px;
-        height: 96px;
+    .avatar-wrapper {
+        width: 110px;
+        height: 110px;
         border-radius: 50%;
-        object-fit: cover;
-        object-position: center 15%;
+        overflow: hidden;
         border: 2.5px solid #FACC15;
         box-shadow: 0 4px 10px rgba(234, 179, 8, 0.3);
+        flex-shrink: 0;
+    }
+    .creator-avatar {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform-origin: center 15%;
+        transform: scale(2.2);
     }
     .creator-name {
         font-size: 1.05rem;
@@ -410,7 +417,9 @@ st.markdown(f"""
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;">
         <!-- Ujwal Hiran -->
         <div class="creator-card">
-            <img src="{ujwal_b64}" class="creator-avatar" alt="Ujwal Hiran"/>
+            <div class="avatar-wrapper">
+                <img src="{ujwal_b64}" class="creator-avatar" alt="Ujwal Hiran"/>
+            </div>
             <div>
                 <p class="creator-name">Ujwal Hiran</p>
                 <p class="creator-role">Project Creator</p>
@@ -418,7 +427,9 @@ st.markdown(f"""
         </div>
         <!-- Riyan VT -->
         <div class="creator-card">
-            <img src="{riyan_b64}" class="creator-avatar" alt="Riyan VT"/>
+            <div class="avatar-wrapper">
+                <img src="{riyan_b64}" class="creator-avatar" style="transform: scale(2.5);" alt="Riyan VT"/>
+            </div>
             <div>
                 <p class="creator-name">Riyan VT</p>
                 <p class="creator-role">Project Creator</p>
