@@ -37,9 +37,13 @@ def get_base64_image(image_path):
 
 ujwal_b64 = get_base64_image(os.path.join(BASE_DIR, "assets", "ujwal.jpg"))
 if not ujwal_b64:
+    ujwal_b64 = get_base64_image(os.path.join(BASE_DIR, "ujwal.jpg"))
+if not ujwal_b64:
     ujwal_b64 = get_base64_image("e:/hackathon1/assets/ujwal.jpg")
 
 riyan_b64 = get_base64_image(os.path.join(BASE_DIR, "assets", "riyan.jpg"))
+if not riyan_b64:
+    riyan_b64 = get_base64_image(os.path.join(BASE_DIR, "riyan.jpg"))
 if not riyan_b64:
     riyan_b64 = get_base64_image("e:/hackathon1/assets/riyan.jpg")
 
